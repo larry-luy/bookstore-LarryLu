@@ -32,7 +32,7 @@ public class BookEntity {
     private String genre;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "book_author",
+    @JoinTable(name = "BOOK_AUTHOR",
             joinColumns = @JoinColumn(name = "BOOK_ISBN", referencedColumnName = "ISBN"),
             inverseJoinColumns = @JoinColumn(name = "AUTHOR_ID", referencedColumnName = "ID"))
     private List<AuthorEntity> authors;

@@ -31,8 +31,6 @@ public class BookServiceImpl implements BookService{
     @Autowired
     private AuthorRepository authorRepo;
 
-    @Autowired
-    private EntityManager entityManager;
 
     @Override
     public BookDTO saveBook(BookDTO book){

@@ -24,7 +24,7 @@ public class BookController {
     private BookService bookService;
 
     @PostMapping("/add")
-    public ResponseEntity<?> addBook(@RequestBody BookDTO book) throws Exception {
+    public ResponseEntity<?> addBook(@RequestBody BookDTO book) {
         LOGGER.info("BookController :: addBook ");
         BookDTO savedBook =  bookService.saveBook(book);
 

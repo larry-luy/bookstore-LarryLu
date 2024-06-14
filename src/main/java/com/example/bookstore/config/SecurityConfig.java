@@ -26,9 +26,9 @@ public class SecurityConfig  {
                     .requestMatchers("/api/books/add").permitAll()
                     .requestMatchers("/api/books/update/**").permitAll()
                     .requestMatchers("/api/books/get").permitAll()
-                    .requestMatchers("/api/books/delete/**").authenticated() // Require authentication for delete
+                    .requestMatchers("/api/books/deleteById/**").authenticated() // Require authentication for delete
                     .requestMatchers("/h2-console/**").permitAll()
-                    .anyRequest().authenticated()
+//                    .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults());
         //Allow the H2 DB console to display full
